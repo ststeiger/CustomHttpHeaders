@@ -43,9 +43,13 @@ namespace CustomHttpHeaders
                     // response.Headers.Set("P3P", "CP=\\\"IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT\\\"");
                     // response.AddHeader("P3P", "CP=\\\"IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT\\\"");
                     response.AppendHeader("P3P", "CP=\\\"IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT\\\"");
-                    response.AppendHeader("IE-SUCKS", "AND SSRS TOO");
+                    // response.AppendHeader("IE-SUCKS", "AND SSRS TOO");
+                    // response.AppendHeader("X-Frame-Options", "DENY");
+                    // response.AppendHeader("X-Frame-Options", "AllowAll");
+                    response.AppendHeader("X-Frame-Options", "SAMEORIGIN");
+
                 }
-                catch(System.Exception ex)
+                catch (System.Exception ex)
                 {
                     // WTF ? 
                     System.Console.WriteLine(ex.Message); // Suppress warning
